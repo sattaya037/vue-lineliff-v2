@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Installed CLI Plugins</h3>
-        <h3>{{userProfile}}</h3>
+        <h3>{{displayName}}</h3>
   </div>
 </template>
 
@@ -34,12 +34,12 @@ export default {
                  this.displayName = profile.displayName;
 
                 // const statusMessage = profile.statusMessage;
-                // const pictureUrl = profile.pictureUrl;
+                const pictureUrl = profile.pictureUrl;
                 // const email = this.$liff.getDecodedIDToken().email;
                 console.log( this.displayName)
                 // console.log(displayName)
                 // console.log(statusMessage)
-                // console.log(pictureUrl)
+                console.log(pictureUrl)
                 // console.log(email)
 
               }).catch(
