@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="https://profile.line-scdn.net/0hr6p5pWzrLRlNTAUtneVSTnEJI3Q6YitRNS02eThOIyphe2McdCNqLzgccSpnfj5IIS1qLGBIeylk">
+    <!-- <img alt="Vue logo" src="{{}}"> -->
+    <img v-bind:src="imageUrl"/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Installed CLI Plugins</h3>
         <h3>{{displayName}}</h3>
@@ -15,6 +16,7 @@ export default {
     return {
       userProfile: null,
       displayName: null,
+      imageUrl:null
     }
   },
   beforeCreate(){
@@ -32,14 +34,11 @@ export default {
                 // const displayName = profile.displayName;
                  this.userProfile = profile.userId;
                  this.displayName = profile.displayName;
-
+                 this.imageUrl = profile.pictureUrl
                 // const statusMessage = profile.statusMessage;
-                const pictureUrl = profile.pictureUrl;
                 // const email = this.$liff.getDecodedIDToken().email;
-                console.log( this.displayName)
                 // console.log(displayName)
                 // console.log(statusMessage)
-                console.log(pictureUrl)
                 // console.log(email)
 
               }).catch(
