@@ -2,7 +2,8 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-
+        <h3>Installed CLI Plugins</h3>
+        <h3>{{userProfile}}</h3>
   </div>
 </template>
 
@@ -27,10 +28,10 @@ export default {
           }else{
             console.log("not login")
             this.$liff.getProfile().then(profile => {
-                const userProfile = profile.userId;
-                const displayName = profile.displayName;
-                 this.userProfile = userProfile;
-                 this.displayName = displayName;
+                // const userProfile = profile.userId;
+                // const displayName = profile.displayName;
+                 this.userProfile = profile.userId;
+                 this.displayName = profile.displayName;
 
                 // const statusMessage = profile.statusMessage;
                 // const pictureUrl = profile.pictureUrl;
