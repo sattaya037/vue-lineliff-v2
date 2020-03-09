@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+
   </div>
 </template>
 
@@ -9,6 +10,12 @@
 // import HelloWorld from './components/HelloWorld.vue'
 
 export default {
+  data() {
+    return {
+      userProfile: null,
+      displayName: null,
+    }
+  },
   beforeCreate(){
         this.$liff.init({
            liffId: "1653924762-Wmvo8BAG"
@@ -22,14 +29,17 @@ export default {
             this.$liff.getProfile().then(profile => {
                 const userProfile = profile.userId;
                 const displayName = profile.displayName;
-                const statusMessage = profile.statusMessage;
-                const pictureUrl = profile.pictureUrl;
-                const email = this.$liff.getDecodedIDToken().email;
-                console.log(userProfile)
-                console.log(displayName)
-                console.log(statusMessage)
-                console.log(pictureUrl)
-                console.log(email)
+                 this.userProfile = userProfile;
+                 this.displayName = displayName;
+
+                // const statusMessage = profile.statusMessage;
+                // const pictureUrl = profile.pictureUrl;
+                // const email = this.$liff.getDecodedIDToken().email;
+                console.log( this.displayName)
+                // console.log(displayName)
+                // console.log(statusMessage)
+                // console.log(pictureUrl)
+                // console.log(email)
 
               }).catch(
                 err => console.error(err)
