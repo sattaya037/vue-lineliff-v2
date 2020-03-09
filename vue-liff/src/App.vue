@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" src="https://profile.line-scdn.net/0hr6p5pWzrLRlNTAUtneVSTnEJI3Q6YitRNS02eThOIyphe2McdCNqLzgccSpnfj5IIS1qLGBIeylk">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Installed CLI Plugins</h3>
         <h3>{{displayName}}</h3>
