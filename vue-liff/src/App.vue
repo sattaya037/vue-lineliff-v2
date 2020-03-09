@@ -21,11 +21,11 @@ export default {
             console.log("not login")
             this.$liff.getProfile().then(profile => {
                 const userProfile = profile.userId;
-                // const displayName = profile.displayName;
-                // const statusMessage = profile.statusMessage;
-                // const pictureUrl = profile.pictureUrl;
-                // const email = liff.getDecodedIDToken().email;
-                console.log(userProfile)
+                const displayName = profile.displayName;
+                const statusMessage = profile.statusMessage;
+                const pictureUrl = profile.pictureUrl;
+                const email = liff.getDecodedIDToken().email;
+                console.log(email)
               }).catch(
                 err => console.error(err)
               );
