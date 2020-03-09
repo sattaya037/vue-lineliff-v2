@@ -24,8 +24,13 @@ export default {
                 const displayName = profile.displayName;
                 const statusMessage = profile.statusMessage;
                 const pictureUrl = profile.pictureUrl;
-                const email = liff.getDecodedIDToken().email;
+                const email = this.$liff.getDecodedIDToken().email;
                 console.log(userProfile)
+                console.log(displayName)
+                console.log(statusMessage)
+                console.log(pictureUrl)
+                console.log(email)
+
               }).catch(
                 err => console.error(err)
               );
