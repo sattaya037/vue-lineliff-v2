@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -19,6 +19,17 @@ export default {
               console.log("liff")
           }else{
             console.log("not login")
+            this.$liff.getProfile().then(profile => {
+                const userProfile = profile.userId;
+                // const displayName = profile.displayName;
+                // const statusMessage = profile.statusMessage;
+                // const pictureUrl = profile.pictureUrl;
+                // const email = liff.getDecodedIDToken().email;
+                console.log(userProfile)
+              }).catch(
+                err => console.error(err)
+              );
+
           }
             // start to use LIFF's api
             
