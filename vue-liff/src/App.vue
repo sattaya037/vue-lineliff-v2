@@ -5,7 +5,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Home</h3>
         <h3>{{displayName}}</h3>
-        <h1>{{statusMessage}}</h1>
+        <h6>{{statusMessage}}</h6>
 
     <nav>
         <!-- <router-link to='/'>Home</router-link> -->
