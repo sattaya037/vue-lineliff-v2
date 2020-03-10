@@ -6,14 +6,13 @@
         <h3>Home</h3>
         <h3>{{displayName}}</h3>
 
-        <v-avatar tile color="blue">
-           <v-icon dark>alarm</v-icon>
-        </v-avatar>
+         
 
         <h5>{{statusMessage}}</h5>
 
     <nav>
         <!-- <router-link to='/'>Home</router-link> -->
+        <v-btn small color="primary">Primary</v-btn>
         <router-link to='/register'>page1</router-link>
         <router-link to='/login'>page2</router-link>
     </nav>
