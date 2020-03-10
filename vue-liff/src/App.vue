@@ -5,9 +5,11 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Home</h3>
         <h3>{{displayName}}</h3>
+
         <v-avatar tile color="blue">
-           <v-icon dark>mdi-alarm</v-icon>
+           <v-icon dark>alarm</v-icon>
         </v-avatar>
+
         <h5>{{statusMessage}}</h5>
 
     <nav>
