@@ -1,7 +1,10 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import VueRouter from 'vue-router'
-import App from './App.vue'
+import App from './App.vue';
 import routes from './routes';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+Vue.use(Vuetify)
 
 Vue.use(VueRouter)
 Vue.prototype.$liff = window.liff

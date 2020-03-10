@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <!-- <img alt="Vue logo" src="{{}}"> -->
     <!-- <img v-bind:src="imageUrl"/> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -13,7 +13,7 @@
         <router-link to='/login'>page2</router-link>
     </nav>
     <router-view />
-  </div>
+  </v-app>
 </template>
 
 <script>
