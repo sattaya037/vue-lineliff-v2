@@ -1,10 +1,17 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="{{}}"> -->
-    <img v-bind:src="imageUrl"/>
+    <!-- <img v-bind:src="imageUrl"/> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-        <h3>Installed CLI Plugins</h3>
+        <h3>Home</h3>
         <h3>{{displayName}}</h3>
+
+    <nav>
+        <router-link to='/'>Home</router-link>
+        <router-link to='/register'>Register</router-link>
+        <router-link to='/login'>Login</router-link>
+    </nav>
+    <router-view />
   </div>
 </template>
 
