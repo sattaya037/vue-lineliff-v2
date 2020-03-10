@@ -5,11 +5,12 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
         <h3>Home</h3>
         <h3>{{displayName}}</h3>
+        <h1>{{statusMessage}}</h1>
 
     <nav>
         <!-- <router-link to='/'>Home</router-link> -->
-        <router-link to='/register'>Register</router-link>
-        <router-link to='/login'>Login</router-link>
+        <router-link to='/register'>page1</router-link>
+        <router-link to='/login'>page2</router-link>
     </nav>
     <router-view />
   </div>
@@ -23,7 +24,8 @@ export default {
     return {
       userProfile: null,
       displayName: null,
-      imageUrl:null
+      imageUrl:null,
+      statusMessage:null
     }
   },
   beforeCreate(){
@@ -42,6 +44,7 @@ export default {
                  this.userProfile = profile.userId;
                  this.displayName = profile.displayName;
                  this.imageUrl = profile.pictureUrl
+                 this.statusMessage = profile.statusMessage
                 // const statusMessage = profile.statusMessage;
                 // const email = this.$liff.getDecodedIDToken().email;
                 // console.log(displayName)
